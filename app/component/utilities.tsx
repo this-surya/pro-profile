@@ -2,7 +2,7 @@ import { ReactNode } from  "react";
 import Image from "next/image";
 
 interface Props {
-    children: ReactNode;
+    children?: ReactNode;
     title?: string;
     size?: string;
     description?: string;
@@ -12,9 +12,7 @@ interface Props {
 }
 
 function Header({ title, size } : Props){
-    return(
-        <h1 className={`text-${size} font-extrabold text-[#1D1D1F] `}>{title}</h1>
-    )
+    return <h1 className={`text-${size} font-extrabold text-[#1D1D1F] `}>{title}</h1>;
 }
 
 function FirstSection({ children, hidden } : Props){
@@ -37,16 +35,15 @@ function SeconSection({ children } : Props){
 }
 
 function Card({ children, title, description, path, picture } : Props){
-    return(
-        <div className="flex flex-col justify-around min-h-50 bg-gray-200 border border-zinc-200 p-5 rounded-lg">
+    return  <div className="flex flex-col justify-around min-h-50 bg-gray-200 border border-zinc-200 p-5 rounded-lg">
                 {children}
-                {picture && (<Image src={path} className="w-full h-50 mb-3" width={600} height={200}/>)}
+                {picture && ( <img src={path} className="w-full h-50 mb-3" width={600} height={200} alt="img"/>)}
                 <h1 className="text-xl font-extrabold">{title}</h1>
                 
                
                 <p>{description}</p>
-              </div>
-    );
+              </div>;
+    
 }
 
 export default function Container({children} : Props){

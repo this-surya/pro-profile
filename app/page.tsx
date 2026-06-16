@@ -33,17 +33,20 @@ export default function Home() {
                 <div>
                   <h2>Social media</h2>
                   <div className="flex">
-                    <img src={"https://img.icons8.com/ios/50/instagram-new--v1.png"} />
-                    <img src={"https://img.icons8.com/ios/50/threads.png"} />
-                    <img src={"https://img.icons8.com/ios/50/linkedin.png"} />
+                    <a href="https://www.instagram.com/thissurya31/" target="_blank"><img src={"https://img.icons8.com/ios/50/instagram-new--v1.png"} /></a>
+                    {/* <a href="https://www.instagram.com/thissurya31/" target="_black"> <img src={"https://img.icons8.com/ios/50/threads.png"} /></a> */}
+
+                    <a href="https://www.linkedin.com/in/suryaproject" target="_black"> <img src={"https://img.icons8.com/ios/50/linkedin.png"} /></a>
+
+                    {/* <a href="www.linkedin.com/in/suryaproject" target="_blank" > <img src={"https://img.icons8.com/ios/50/linkedin.png"} /></a> */}
                   </div>
                 </div>
 
                 <div>
                   <h2>Workspace</h2>
                   <div className="flex">
-                    <img src={"https://img.icons8.com/ios-filled/50/github.png"} />
-                    <img src={"https://img.icons8.com/ios/50/gmail-new.png"} />
+                    <a href="https://github.com/this-surya" target="_blank"><img src={"https://img.icons8.com/ios-filled/50/github.png"} /></a>
+                    <a  href="mailto:uyahasibuan.123@gmail.com" target="_blank" ><img src={"https://img.icons8.com/ios/50/gmail-new.png"} /></a>
                   </div>
                 </div>
 
@@ -52,7 +55,7 @@ export default function Home() {
 
 
             <div className="lg:w-1/2 lg:h-screen h-4/5 order-first justify-center flex pt-20">
-              <Image className="w-86 h-[30rem] my-auto bg-zinc-200 shadow-xl/30 rounded-xl" src={"/surya.png"} width={200} height={200} />
+              <Image className="w-86 h-[30rem] my-auto bg-zinc-200 shadow-xl/30 rounded-xl" src={"/surya.png"} width={200} height={200} alt="img" />
             </div>
           </section>
         </FirstSection>
@@ -63,7 +66,7 @@ export default function Home() {
               <p>Service</p>
               <Header title="What i do" size="5xl" />
             </div>
-            <div className="w-full  grid lg:grid-cols-3 grid-cols-2 lg:gap-4 gap-1">
+            <div className="w-full  grid lg:grid-cols-3 place-items-center grid-cols-2 lg:gap-4 gap-1">
               {/* <div className="bg-gray-400 wh-64 grid grid-  rows-3 grid-flow-col gap-4"></div> */}
               <Card
                 title="Web Development"
@@ -104,30 +107,29 @@ export default function Home() {
               <Header title="See my work" size="5xl" />
             </div>
 
-            <div className=" grid lg:grid-cols-3 grid-cols-2 lg:gap-4 gap-1 lg:mx-20 mb-5">
-              <Card title="Head of Digital Business Student Association" path="/asset/image6.jpeg" picture>
-              </Card>
+            <div className=" grid lg:grid-cols-3 grid-cols-2 place-items-center lg:gap-4 gap-1 lg:mx-20 mb-5">
+              <Card title="Anime Streaming from mylist anime api 'Unime'" path="/asset/gambar1.png" picture />
+      
 
-              <Card title="Dynamic JavaScript Website Workshop Trainer" path="/asset/image2.jpeg" picture>
-              </Card>
+              <Card title="Design figma of coffe shop mobile app" path="/asset/gambar2.png" picture />
+      
 
-              <Card title="Mobile App Designer"path="/asset/image3.jpeg" picture>
-              </Card>
+              <Card title="Design figma of naluri cafe mobile app"path="/asset/gambar3.png" picture />
+      
 
-              <Card title="Media, Photography & Publication Staff" path="/asset/image1.jpg" picture>
-              </Card>
+              <Card title="Personal web portofolio" path="/asset/gambar4.png" picture />
+      
 
-              <Card title="Web Development" path="/asset/image1.jpg" picture>
-              </Card>
-
+              <Card title="Website e-commerce" path="/asset/gambar5.png" picture />
+{/* 
               <Card title="Visitor Satisfaction Survey Enumerator" path="/asset/image3.jpeg" picture>
-              </Card>
+              </Card> */}
             </div>
           </section>
         </FirstSection>
 
         <FirstSection hidden>
-          <section id="contact" className="py-24" id="contact">
+          <section id="contact" className="py-24" >
             <div className="mx-auto max-w-6xl px-6">
 
               <div className="mb-12 text-center">
@@ -175,7 +177,6 @@ export default function Home() {
                         Message
                       </label>
                       <textarea
-                        rows="5"
                         placeholder="Tell me about your project..."
                         className="w-full rounded-xl border border-zinc-200 px-4 py-3 outline-none transition focus:border-zinc-900"
                       ></textarea>
@@ -207,7 +208,7 @@ export default function Home() {
                       <div>
                         <p className="text-sm text-zinc-500">Email</p>
                         <a
-                          href="mailto:thissurya31@gmail.com"
+                          href="mailto:uyahasibuan.123@gmail.com"
                           className="font-medium hover:underline"
                         >
                           thissurya31@gmail.com
@@ -235,23 +236,15 @@ export default function Home() {
                         target="_blank"
                         className="flex h-12 w-12 items-center justify-center rounded-full border border-zinc-200 transition hover:bg-zinc-50"
                       >
-                        📷
+                        <img src="https://img.icons8.com/ios/50/instagram-new--v1.png" alt="ig" />
                       </a>
 
                       <a
-                        href="#"
+                        href="https://www.linkedin.com/in/suryaproject"
                         target="_blank"
                         className="flex h-12 w-12 items-center justify-center rounded-full border border-zinc-200 transition hover:bg-zinc-50"
                       >
-                        @
-                      </a>
-
-                      <a
-                        href="#"
-                        target="_blank"
-                        className="flex h-12 w-12 items-center justify-center rounded-full border border-zinc-200 transition hover:bg-zinc-50"
-                      >
-                        in
+                        <img src="https://img.icons8.com/ios/50/linkedin.png" alt="link" />
                       </a>
 
                       <a
@@ -260,14 +253,6 @@ export default function Home() {
                         className="flex h-12 w-12 items-center justify-center rounded-full border border-zinc-200 transition hover:bg-zinc-50"
                       >
                         &lt;/&gt;
-                      </a>
-
-                      <a
-                        href="#"
-                        target="_blank"
-                        className="flex h-12 w-12 items-center justify-center rounded-full border border-zinc-200 transition hover:bg-zinc-50"
-                      >
-                        F
                       </a>
 
                     </div>
