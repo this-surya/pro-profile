@@ -64,7 +64,7 @@ function Footer() {
 export default function Navbar(){
     return(
         <div className="z-99 fixed flex w-full  bg-[#424245] p-5  justify-between">
-            <h1 className="text-2xl font-bold text-white">Navbar</h1>
+            <h1 className="text-2xl font-bold text-white"></h1>
             <div className="hidden lg:grid grid-rows-1 grid-flow-col gap-4 text-white">
                 <a href="#home">Home</a>
                 <a href="#about">About</a>

@@ -4,7 +4,7 @@
 // import Header from "./component/utilities";
 
 // import SeconSection  from "./component/utilities";
-import Container, { FirstSection, SeconSection, Header, Card } from "./component/utilities"
+import Container, { FirstSection, handleClick, Header, Card } from "./component/utilities"
 import Navbar from "./component/userinterface";
 import { Footer } from "./component/userinterface";
 import Image from "next/image";
@@ -31,7 +31,7 @@ export default function Home() {
 
               <div className=" flex w-full justify-evenly">
                 <div>
-                  <h2>Social media</h2>
+                  <h2 className="mb-4 text-sm font-medium text-zinc-500">Social media</h2>
                   <div className="flex">
                     <a href="https://www.instagram.com/thissurya31/" target="_blank"><img src={"https://img.icons8.com/ios/50/instagram-new--v1.png"} /></a>
                     {/* <a href="https://www.instagram.com/thissurya31/" target="_black"> <img src={"https://img.icons8.com/ios/50/threads.png"} /></a> */}
@@ -43,7 +43,7 @@ export default function Home() {
                 </div>
 
                 <div>
-                  <h2>Workspace</h2>
+                  <h2 className="mb-4 text-sm font-medium text-zinc-500">Workspace</h2>
                   <div className="flex">
                     <a href="https://github.com/this-surya" target="_blank"><img src={"https://img.icons8.com/ios-filled/50/github.png"} /></a>
                     <a  href="mailto:uyahasibuan.123@gmail.com" target="_blank" ><img src={"https://img.icons8.com/ios/50/gmail-new.png"} /></a>
@@ -66,25 +66,29 @@ export default function Home() {
               <p>Service</p>
               <Header title="What i do" size="5xl" />
             </div>
-            <div className="w-full  grid lg:grid-cols-3 place-items-center grid-cols-2 lg:gap-4 gap-1">
+            <div className="w-full  grid lg:grid-cols-2 place-items-center grid-cols-2 lg:gap-4 gap-1">
               {/* <div className="bg-gray-400 wh-64 grid grid-  rows-3 grid-flow-col gap-4"></div> */}
               <Card
+                icon="https://img.icons8.com/ios/50/web.png"
                 title="Web Development"
                 description="Building modern, responsive websites using the latest web technologies with a focus on performance and user experience." />
 
               <Card
-                title="Digital Content Creation"
+                icon="https://img.icons8.com/ios/50/database--v1.png"
+                title="Database Design & Management"
                 description="Create and manage digital content for social media to increase engagement and information delivery." />
 
-              <Card
+              {/* <Card
                 title="Database Design & Management"
-                description="Design, optimize, and manage relational databases with MySQL and RDBMS principles to ensure data integrity and performance." />
+                description="Design, optimize, and manage relational databases with MySQL and RDBMS principles to ensure data integrity and performance." /> */}
 
               <Card
+                icon="https://img.icons8.com/sf-black/64/design.png"
                 title="UI/UX Design"
                 description="Create intuitive website and mobile application designs using Figma and Canva, focusing on usability and modern aesthetics." />
 
               <Card
+                icon="https://img.icons8.com/ios-filled/50/cloud-database.png"
                 title="API Integration"
                 description="Integrate third-party services and APIs to enhance application functionality, automate workflows, and improve user experience." />
 
@@ -107,17 +111,17 @@ export default function Home() {
               <Header title="See my work" size="5xl" />
             </div>
 
-            <div className=" grid lg:grid-cols-3 grid-cols-2 place-items-center lg:gap-4 gap-1 lg:mx-20 mb-5">
-              <Card title="Anime Streaming from mylist anime api 'Unime'" path="/asset/gambar1.png" picture />
+            <div className=" grid lg:grid-cols-3 lg:gap-4 gap-1 lg:mx-20 mb-5">
+              <Card title="Anime Streaming 'Unime'" path="/asset/gambar1.png" link="u-nime-api.vercel.app" picture />
       
 
-              <Card title="Design figma of coffe shop mobile app" path="/asset/gambar2.png" picture />
+              <Card title="Design figma of coffe shop mobile app" path="/asset/gambar2.png" link="https://www.figma.com/proto/Pzqk8WxuPOrGOdBOIN0PAK/UI-UX?t=uLtne6tRFi3u9LuR-1" picture />
       
 
-              <Card title="Design figma of naluri cafe mobile app"path="/asset/gambar3.png" picture />
+              <Card title="Design figma of naluri cafe mobile app"path="/asset/gambar3.png" link="https://www.figma.com/proto/Q6TPD2jwjVf9JTtqVJx5LS/Wireframe-cafe-naluri?node-id=0-1&t=nmxOC7ECP56mPR4y-1" picture />
       
 
-              <Card title="Personal web portofolio" path="/asset/gambar4.png" picture />
+              <Card title="Personal web portofolio" path="/asset/gambar4.png" link="https://rondy-saputra.vercel.app/" picture />
       
 
               <Card title="Website e-commerce" path="/asset/gambar5.png" picture />
@@ -234,7 +238,7 @@ export default function Home() {
                       <a
                         href="https://instagram.com/thissurya31"
                         target="_blank"
-                        className="flex h-12 w-12 items-center justify-center rounded-full border border-zinc-200 transition hover:bg-zinc-50"
+                        className="flex h-12 w-12 items-center justify-center rounded-full  transition hover:bg-zinc-50"
                       >
                         <img src="https://img.icons8.com/ios/50/instagram-new--v1.png" alt="ig" />
                       </a>
@@ -242,7 +246,7 @@ export default function Home() {
                       <a
                         href="https://www.linkedin.com/in/suryaproject"
                         target="_blank"
-                        className="flex h-12 w-12 items-center justify-center rounded-full border border-zinc-200 transition hover:bg-zinc-50"
+                        className="flex h-12 w-12 items-center justify-center rounded-full  transition hover:bg-zinc-50"
                       >
                         <img src="https://img.icons8.com/ios/50/linkedin.png" alt="link" />
                       </a>

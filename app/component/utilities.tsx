@@ -9,6 +9,8 @@ interface Props {
     hidden?: boolean;
     path?: string;
     picture?: boolean;
+    link?: string;
+    icon?: string;
 }
 
 function Header({ title, size } : Props){
@@ -34,10 +36,11 @@ function SeconSection({ children } : Props){
     );
 }
 
-function Card({ children, title, description, path, picture } : Props){
+function Card({ children, title, description, path, picture, link, icon } : Props){
     return  <div className="flex flex-col justify-around min-h-50 bg-gray-200 border border-zinc-200 p-5 rounded-lg">
+         {icon && ( <img src={icon} alt="icon" width={50} height={50}/> )}
                 {children}
-                {picture && ( <img src={path} className="w-full h-50 mb-3" width={600} height={200} alt="img"/>)}
+                {picture && ( <a href={link} target="_blank"> <img src={path} className="w-full h-50 mb-3" width={600} height={200} alt="img"/> </a>)}
                 <h1 className="text-xl font-extrabold">{title}</h1>
                 
                
@@ -46,6 +49,9 @@ function Card({ children, title, description, path, picture } : Props){
     
 }
 
+function handleClick(){
+    alert("button clicked")
+}
 export default function Container({children} : Props){
     return(
         <div className="w-full container px-4">
@@ -55,6 +61,7 @@ export default function Container({children} : Props){
 }
 
 export{
+    handleClick,
     FirstSection,
     SeconSection,
     Header,
